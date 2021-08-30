@@ -7,6 +7,7 @@ const
     isDebug = new URLSearchParams(document.location.search).get('debug'),
     editDialog = document.getElementById('dialog-edit'),
     editButton = document.getElementById('btn-edit'),
+    itemDescription = document.getElementById('description'),
     editConfirmButton = editDialog.getElementsByClassName('apply')[0],
     editOptions = editDialog.getElementsByClassName('options')[0],
     editPresets = editDialog.getElementsByClassName('presets')[0],
@@ -75,6 +76,11 @@ const
             p5Wheel.setData(dataSets[currentDataSet]);
             editButton.className = 'hide';
         }
+    },
+    showDescription = html => {
+        // if (html.length) {
+            itemDescription.innerHTML = html;
+        // }
     }
 ;
 
@@ -126,6 +132,7 @@ currentUrl = currentUrl.substring(0, currentUrl.lastIndexOf("/"));
 const p5ImagePlayer = new p5(GifPlayer);
 
 p5Wheel.onStartWheel = (durationSec) => {
+    itemDescription.style.visibility = 'hidden';
     if (currentDataSet === 'custom') {
         p5ImagePlayer.onStartWheel(durationSec);
     }
@@ -156,6 +163,7 @@ const
 lastWheelBtnEl.addEventListener('click', lastWheelLinkHandler);
 
 p5Wheel.onStopWheel = () => {
+    itemDescription.style.visibility = 'visible';
     onStopLastTextHandler();
 };
 
@@ -184,6 +192,8 @@ p5Wheel.onMoveWheel = (delta) => {
 
 p5Wheel.onSelectItem = function(data, selectedKey) {
     selectedText = data[selectedKey] ? data[selectedKey].title || data[selectedKey] : '';
+    selectedDescription = data[selectedKey] && data[selectedKey].description ? data[selectedKey].description : '';
+    showDescription(selectedDescription);
 
     let url = currentUrl + '/images/000.png';
     // if (dataSets[currentDataSet]) {
