@@ -1,0 +1,3 @@
+[submodule "whopg2-wheel"]
+	path = whopg2-wheel
+	url = https://github.com/shtrih/whopg2-wheel
