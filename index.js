@@ -108,10 +108,6 @@ editConfirmButton.addEventListener('click', function () {
     p5Wheel.mouseDragEnable();
 
     p5Wheel.setData(editedDataToArray());
-    //
-    // if (currentDataSet === 'items') {
-    //     itemsEditedDataSet = editedDataSets[currentDataSet];
-    // }
 });
 
 const p5Wheel = new p5(WheelSketch);
@@ -148,7 +144,7 @@ const
     onStopLastTextHandler = () => {
         lastSelectedText = selectedText;
         lastWheelTextEl.innerHTML = `Выпало в прошлый раз: «${lastSelectedText}»`;
-        document.getElementById('copy-last-selected').setAttribute('style', 'visibility: visible')
+        // document.getElementById('copy-last-selected').setAttribute('style', 'visibility: visible')
     },
     lastWheelBtnEl = document.getElementById('copy-last-selected'),
     lastWheelLinkHandler = function(e) {
@@ -201,13 +197,6 @@ p5Wheel.onSelectItem = function(data, selectedKey) {
     }
 
     let url = currentUrl + '/images/000.png';
-    // if (dataSets[currentDataSet]) {
-    //     const imageIndex = dataSets[currentDataSet].indexOf(data[selectedKey]);
-    //     if (imageIndex !== -1) {
-    //         url = getImageURI(imageIndex);
-    //     }
-    // }
-
     if (data[selectedKey] && typeof data[selectedKey].image === 'string') {
         url = currentUrl +'/images'+ data[selectedKey].image;
     }
