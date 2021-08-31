@@ -13,8 +13,8 @@ function toDataSet(json) {
     let result = [];
 
     for (let i = 0; i < json.length; i++) {
-        const rarity = json[i].rarity || 1;
-        for (let j = 0; j < rarity; j++) {
+        const quantity = json[i].quantity || 1;
+        for (let j = 0; j < quantity; j++) {
             result.push(json[i])
         }
     }
@@ -24,10 +24,6 @@ function toDataSet(json) {
 
 const dataSets = {
     items: [
-        'foo',
-        'bar',
-    ],
-    events: [
         'foo',
         'bar',
     ],

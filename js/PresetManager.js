@@ -4,9 +4,6 @@ class PresetManager {
             items: [
                 new PresetAll(true),
             ],
-            events: [
-                new PresetAll(true),
-            ],
         };
         this._nodes = {};
         this._activePresets = {};

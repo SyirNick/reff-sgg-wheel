@@ -77,10 +77,14 @@ const
             editButton.className = 'hide';
         }
     },
-    showDescription = html => {
-        // if (html.length) {
-            itemDescription.innerHTML = html;
-        // }
+    showDescription = data => {
+        const description = data.description ? `<div class="body">${data.description}</div>` : '',
+            charges = data.charge ? `<div class="charges"><span>Заряды: </span>${data.charge}</div>` : '',
+            limit = data.limit ? `<div class="limit"><span>Лимит: </span>${data.limit}</div>` : '',
+            type = data.type ? `<div class="type"><span>Тип: </span>${data.type}</div>` : ''
+        ;
+
+        itemDescription.innerHTML = `${type}&nbsp;${charges}&nbsp;${limit}${description}`;
     }
 ;
 
@@ -192,8 +196,7 @@ p5Wheel.onMoveWheel = (delta) => {
 
 p5Wheel.onSelectItem = function(data, selectedKey) {
     selectedText = data[selectedKey] ? data[selectedKey].title || data[selectedKey] : '';
-    selectedDescription = data[selectedKey] && data[selectedKey].description ? data[selectedKey].description : '';
-    showDescription(selectedDescription);
+    showDescription(data[selectedKey]);
 
     let url = currentUrl + '/images/000.png';
     // if (dataSets[currentDataSet]) {

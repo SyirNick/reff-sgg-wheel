@@ -25,3 +25,20 @@
 	margin: 0;
 	left: auto;
 }
+
+#description .charges,
+#description .limit,
+#description .type {
+	display: inline;
+}
+
+#description .charges span,
+#description .limit span,
+#description .type span {
+	font-weight: bold;
+	color: hsl(210, 81%, 75%);
+}
+
+#description .body {
+	margin-top: 0.5em;
+}
