@@ -195,8 +195,10 @@ p5Wheel.onMoveWheel = (delta) => {
 };
 
 p5Wheel.onSelectItem = function(data, selectedKey) {
-    selectedText = data[selectedKey] ? data[selectedKey].title || data[selectedKey] : '';
-    showDescription(data[selectedKey]);
+    if (data[selectedKey]) {
+        selectedText = data[selectedKey].title || data[selectedKey];
+        showDescription(data[selectedKey]);
+    }
 
     let url = currentUrl + '/images/000.png';
     // if (dataSets[currentDataSet]) {
