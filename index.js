@@ -117,12 +117,12 @@ const DMCAPlaylistSwitcher = new CheckboxStateable('with-dmca', 'video-with-dmca
 DMCAPlaylistSwitcher
     .setValues(videosProtected, videosFree)
     .onSwitch((value) => {
-        p5Wheel.setVideo(new Video(value, 'reff-wheel/'));
+        p5Wheel.setVideo(new Video(value, 'reffsgg-wheel/'));
     })
 ;
 
 p5Wheel.onAfterSetup = function () {
-    p5Wheel.setVideo(new Video(DMCAPlaylistSwitcher.value, 'reff-wheel/'));
+    p5Wheel.setVideo(new Video(DMCAPlaylistSwitcher.value, 'reffsgg-wheel/'));
 };
 
 const image = document.querySelector('#item-image img');
