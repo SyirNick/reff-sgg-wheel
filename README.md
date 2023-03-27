@@ -1,2 +1,2 @@
-# Игровой ивент Refferency SGG
+# Игровой ивент RSGG (Refferency Steam Game Gauntlet)
 
