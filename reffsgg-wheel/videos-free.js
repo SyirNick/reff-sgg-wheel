@@ -31,7 +31,7 @@ const videosFree = [
     ['videos/Peter Parker edit Lordly.mp4', 0, 20],
     ['videos/U GOT Яйца.mp4', 0, 30],
     ['videos/flopa.mp4', 0, 24],
-    ['videos/JOJO'S BIZARRE MAKEUP TUTORIAL.mp4', 3, 27],
+    ['videos/JOJOS BIZARRE MAKEUP TUTORIAL.mp4', 3, 27],
     ['videos/Квас Закамский это хит.mp4', 0, 14],
     ['videos/gavno.mp4', 0, 30],
     ['videos/dj-eban2.mp4', 0, 26],
