@@ -1,0 +1,3 @@
+[submodule "rsgg-wheel"]
+	path = rsgg-wheel
+	url = https://github.com/SyirNick/rsgg-wheel
