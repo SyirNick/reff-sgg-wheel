@@ -117,12 +117,12 @@ const DMCAPlaylistSwitcher = new CheckboxStateable('with-dmca', 'video-with-dmca
 DMCAPlaylistSwitcher
     .setValues(videosProtected, videosFree)
     .onSwitch((value) => {
-        p5Wheel.setVideo(new Video(value, 'whopg2-wheel/'));
+        p5Wheel.setVideo(new Video(value, 'reff-wheel/'));
     })
 ;
 
 p5Wheel.onAfterSetup = function () {
-    p5Wheel.setVideo(new Video(DMCAPlaylistSwitcher.value, 'whopg2-wheel/'));
+    p5Wheel.setVideo(new Video(DMCAPlaylistSwitcher.value, 'reff-wheel/'));
 };
 
 const image = document.querySelector('#item-image img');
@@ -212,7 +212,7 @@ const customDialog = document.getElementById('custom-list'),
     saveCustomData = function (stringData) {
         const url = new URL(window.location);
 
-        document.title = 'Колесо WhoPG2 (' + stringData.substring(0, 30) + '…)';
+        document.title = 'Колесо RSGG (' + stringData.substring(0, 30) + '…)';
 
         url.search = new URLSearchParams({custom: stringData});
         // console.log(url.toString());
